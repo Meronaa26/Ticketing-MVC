@@ -6,13 +6,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Service     // when we creat bean from services instead of saying component we can say services
 public class RoleServiceImpl extends AbstractMapService<RoleDTO,Long> implements RoleService {
 
 
     @Override
     public RoleDTO save(RoleDTO object) {
-        return super.save(object.getId(), object);
+        return super.save(object.getId(), object);  //super keyword helps to call parent method on child
     }
 
     @Override
@@ -31,8 +31,4 @@ public class RoleServiceImpl extends AbstractMapService<RoleDTO,Long> implements
         return super.findById(id);
     }
 
-    @Override
-    public void delete(RoleDTO object) {
-
-    }
 }

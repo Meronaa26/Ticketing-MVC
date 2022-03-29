@@ -12,7 +12,9 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-public class DataGenerator implements CommandLineRunner {
+public class DataGenerator implements CommandLineRunner { // CommandLineRunner is coming with spring boot
+                                                         //it is an interface
+                                                  //when ever i say run , the below data should be executed  first
 
     RoleService roleService;
     UserService userService;
@@ -29,6 +31,8 @@ public class DataGenerator implements CommandLineRunner {
         RoleDTO adminRole = new RoleDTO(1L,"Admin");
         RoleDTO managerRole = new RoleDTO(2L,"Manager");
         RoleDTO employeeRole = new RoleDTO(3L,"Employee");
+
+        //I need to add data to map(because my data is now in map). We can use save method that we create in
 
         roleService.save(adminRole);
         roleService.save(managerRole);
