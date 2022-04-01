@@ -4,6 +4,7 @@ import com.cydeo.dto.RoleDTO;
 import com.cydeo.dto.UserDTO;
 import com.cydeo.enums.Gender;
 import com.cydeo.enums.Status;
+import com.cydeo.service.ProjectService;
 import com.cydeo.service.RoleService;
 import com.cydeo.service.UserService;
 import com.cydeo.service.impl.RoleServiceImpl;
@@ -22,10 +23,12 @@ public class DataGenerator implements CommandLineRunner { // CommandLineRunner i
 
     RoleService roleService;
     UserService userService;
+    ProjectService projectService;
 
-    public DataGenerator(RoleService roleService, UserService userService) {
+    public DataGenerator(RoleService roleService, UserService userService, ProjectService projectService) {
         this.roleService = roleService;
         this.userService = userService;
+        this.projectService = projectService;
     }
 
     @Override
