@@ -21,6 +21,9 @@ public class User extends BaseEntity {
     private Role role;
     private Gender gender;
 
+    //we can not use@aLLARG CONSTRUCTOR IF WE  are extending a class that's why we need to creat a constructor manually
+    // lombok will not creat(@Allarg) for the parent class==> that's why we need to creat it manually
+
     public User(Long id, LocalDateTime insertDateTime, Long insertUserId, LocalDateTime lastUpdateDateTime, Long lastUpdateUserId, String firstName, String lastName, String userName, String passWord, boolean enabled, String phone, Role role, Gender gender) {
         super(id, insertDateTime, insertUserId, lastUpdateDateTime, lastUpdateUserId);
         this.firstName = firstName;

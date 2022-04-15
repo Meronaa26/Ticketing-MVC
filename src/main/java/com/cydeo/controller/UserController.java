@@ -24,7 +24,7 @@ public class UserController {
     public String create(Model model){
 
         model.addAttribute("user",new UserDTO());
-        model.addAttribute("roles",roleService.findAll());
+        model.addAttribute("roles",roleService.findAll());  // bring me all roles from roles(since that's a business logic it is coming from service 
         model.addAttribute("users",userService.findAll());
         return "user/create";
     }
