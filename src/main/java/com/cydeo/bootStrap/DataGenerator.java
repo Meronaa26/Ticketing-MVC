@@ -21,7 +21,7 @@ public class DataGenerator implements CommandLineRunner { // CommandLineRunner i
                                                          //it is an interface
                                                   //when ever i say run , the below data should be executed  first
 
-    RoleService roleService;
+    RoleService roleService; //==> injection is from interface always
     UserService userService;
     ProjectService projectService;
 
@@ -39,7 +39,6 @@ public class DataGenerator implements CommandLineRunner { // CommandLineRunner i
         RoleDTO managerRole = new RoleDTO(2L,"Manager");
         RoleDTO employeeRole = new RoleDTO(3L,"Employee");
 
-        //I need to add data to map(because my data is now in map). We can use save method that we create in
 
         roleService.save(adminRole);
         roleService.save(managerRole);

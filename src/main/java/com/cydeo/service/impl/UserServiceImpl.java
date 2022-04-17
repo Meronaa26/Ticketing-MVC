@@ -12,7 +12,7 @@ public class UserServiceImpl extends AbstractMapService<UserDTO,String> implemen
 
     @Override
     public UserDTO save(UserDTO object) {
-        return super.save(object.getUserName(),object);
+        return super.save(object.getUserName(),object);// we use username in here because it is unique identifier
     }
 
     @Override

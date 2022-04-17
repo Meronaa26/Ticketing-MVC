@@ -8,6 +8,8 @@ import java.util.List;
 
 @Service     // when we creat bean from services instead of saying component we can say services
 public class RoleServiceImpl extends AbstractMapService<RoleDTO,Long> implements RoleService {
+    //first extend and then implement the interface
+    // since i am implementing the interface i have to implement the methods
 
 
     @Override
